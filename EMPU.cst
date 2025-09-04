@@ -1,0 +1,35 @@
+// Các chân GPIO của người dùng, ánh xạ tới các chân vật lý đã chỉ định.
+// Lưu ý: Các chân này được định nghĩa là GPIO trong module top-level của bạn.
+// Các chân GPIO trong EMPU Hard-Core được đánh số từ 0 đến 15.
+// GPIO[0] -> P30
+// GPIO[1] -> P29
+// GPIO[2] -> P28
+// GPIO[3] -> P27
+// GPIO[4] -> P31
+// GPIO[5] -> P32
+// GPIO[6] -> P34
+// GPIO[7] -> P35
+
+// Chân nguồn và reset
+IO_LOC "crystalClk" 45;
+IO_PORT "crystalClk" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+IO_LOC "resetButton" 15;
+IO_PORT "resetButton" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+
+IO_LOC "GPIO_RST" 39;
+IO_PORT "GPIO_RST" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC "GPIO_DC" 40;
+IO_PORT "GPIO_DC" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC "GPIO_SCK" 41;
+IO_PORT "GPIO_SCK" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+
+
+IO_LOC "GPIO_MOSI" 43;
+IO_PORT "GPIO_MOSI" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC "GPIO_BL" 44;
+IO_PORT "GPIO_BL" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
